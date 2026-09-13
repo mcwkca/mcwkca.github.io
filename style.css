@@ -1,45 +1,364 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #29332f;
+    background-color: #f7f5ef;
+    line-height: 1.7;
 }
 
-header {
-    background-color: #2563eb;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #f7f5ef;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #315c50;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.nav-links a {
+    color: #46534e;
+}
+
+.nav-links a:hover {
+    color: #315c50;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(49, 92, 80, 0.95),
+            rgba(49, 92, 80, 0.65)
+        ),
+        #315c50;
+
     color: white;
-    padding: 60px 20px;
 }
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+.hero-content {
+    max-width: 760px;
 }
 
-main {
-    background-color: white;
+.eyebrow {
+    margin-bottom: 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.05;
+    font-weight: normal;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 30px 0;
+
+    font-size: 21px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    background-color: #e7c98b;
+    color: #29332f;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+
+    background-color: #f0d9a5;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    font-weight: normal;
+}
+
+.section p {
     max-width: 700px;
-    margin: 40px auto;
-    padding: 40px;
-    border-radius: 12px;
+    font-size: 18px;
 }
 
-button {
-    background-color: #2563eb;
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: #f7f5ef;
+}
+
+.about .section-content {
+    max-width: 850px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background-color: #e5eee9;
+}
+
+.cards {
+    margin-top: 55px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    padding: 35px;
+
+    background-color: #f7f5ef;
+
+    border-radius: 15px;
+}
+
+.card .icon {
+    margin-bottom: 15px;
+
+    color: #315c50;
+
+    font-size: 38px;
+}
+
+.card h3 {
+    margin-top: 0;
+
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.card p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+
+/* =========================
+   APPROACH
+========================= */
+
+.approach {
+    background-color: #315c50;
     color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 6px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #1d4ed8;
+.approach-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
 }
+
+.approach p {
+    color: #e4ebe7;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+
+    background-color: #e7c98b;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact .button {
+    margin-top: 20px;
+
+    background-color: #315c50;
+    color: white;
+}
+
+.contact .button:hover {
+    background-color: #24483e;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    color: #777;
+    padding: 45px 7%;
+
+    text-align: center;
+
+    background-color: #29332f;
+    color: #dce4df;
+
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+    margin-bottom: 5px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+
+    font-size: 12px;
+    color: #9ca9a3;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: auto;
+        padding: 25px 7%;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero-text {
+        font-size: 18px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
 }
